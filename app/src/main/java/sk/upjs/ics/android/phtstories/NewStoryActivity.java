@@ -10,6 +10,7 @@ import android.os.Environment;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -36,8 +37,8 @@ public class NewStoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_story);
 
-        //String imageUri = "android.resource://sk.upjs.ics.android.phtstories/drawable/init";;
-        //imagePath = Uri.parse("android.resource://sk.upjs.ics.android.phtstories/drawable/init");
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar_new_story);
+        setSupportActionBar(myToolbar);
 
         imageView = (ImageView) findViewById(R.id.newStoryPicImageView);
         storyHeaderInputEditText = (TextInputEditText) findViewById(R.id.newStoryHeaderInputEditText);
